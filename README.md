@@ -40,19 +40,18 @@ contract myToken {
     mapping(address => uint256) public balances;
 
     // mint function
-    function mint(address _mint, uint256 _value) public {
+    function mintToken(address _mint, uint256 _value) public {
         totalSupply += _value;
         balances[_mint] += _value;
     }
 
     // burn function
-    function burn(address _burn, uint256 _value) public {
+    function burnToken(address _burn, uint256 _value) public {
         if (balances[_burn] >= _value) {
             totalSupply -= _value;
             balances[_burn] -= _value;
         }
     }
-}
 To compile the code, you have to click on the "Solidity Compiler" tab in the left-hand sidebar. Before clicking on compile button, check if the compiler version is set to same as pragma in the code and then click on "Compile KishanToken.sol" icon.
 
 When the code will compile, you will have to deploy the contract by clicking on "Deploy & Run Transactions" tab in the left-hand sidebar.
@@ -61,9 +60,9 @@ Select the "myToken" contract from the dropdown menu, and then click on the "Dep
 
 Once the contract is deployed, you can interact with it. By clicking on "nameOfToken", you can retrieve "KISHAN" string. By clicking on "symbolOfToken", you can retrieve "KR" string.
 
-Click on mint dropdown icon and fill address and value, and click on transact icon. Once clicked, click on "totalSupply" to print the minted tokens.
+Click on minttoken dropdown icon and fill address and value, and click on transact icon. Once clicked, click on "totalSupply" to print the minted tokens.
 
-Now, click on burn dropdown icon and fill address and value, and click on transact icon. Once clicked, click on "totalSupply" to print the remaining tokens after burning.
+Now, click on burntoken dropdown icon and fill address and value, and click on transact icon. Once clicked, click on "totalSupply" to print the remaining tokens after burning.
 
 Help
 For any issues or common problems related to this contract, refer Solidity documentation on internet.
