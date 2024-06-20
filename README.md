@@ -1,9 +1,9 @@
 # ETH-BEGINNER-ASSESMENT
-KishanToken Contract
+myToken Contract
 This project is a simple token contract, build in Solidity programming language which allows to mint and burn tokens, tracking total supply and maintaining balances. This program will be a good point to start with, to those who are unfamiliar with solidity.
 
 Description
-The KishanToken contract is designed to handle basic operations like minting and burning of tokens. It has a feature that allow you to alter the overall token supply and update balances accordingly. This contract can be used to create unique tokens in blockchain.
+The myToken contract is designed to handle basic operations like minting and burning of tokens. It has a feature that allow you to alter the overall token supply and update balances accordingly. This contract can be used to create unique tokens in blockchain.
 
 Getting Started
 Installing
@@ -13,7 +13,7 @@ Executing program
 On reaching Remix website, you have to create a new file by "+" sign in the left-hand sidebar and save the file with .sol extension. Now, copy and paste the code into file:
 
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.0;
 
 /*
        REQUIREMENTS
@@ -29,11 +29,11 @@ pragma solidity 0.8.18;
        to the amount that is supposed to be burned.
 */
 
-contract KishanToken {
+contract myToken {
     // public variables here
 
     string public nameOfToken = "KISHAN";
-    string public symbolOfToken = "KK";
+    string public symbolOfToken = "KR";
     uint256 public totalSupply = 0;
 
     // mapping variable here
@@ -57,9 +57,9 @@ To compile the code, you have to click on the "Solidity Compiler" tab in the lef
 
 When the code will compile, you will have to deploy the contract by clicking on "Deploy & Run Transactions" tab in the left-hand sidebar.
 
-Select the "KishanToken" contract from the dropdown menu, and then click on the "Deploy" button.
+Select the "myToken" contract from the dropdown menu, and then click on the "Deploy" button.
 
-Once the contract is deployed, you can interact with it. By clicking on "nameOfToken", you can retrieve "KISHAN" string. By clicking on "symbolOfToken", you can retrieve "KK" string.
+Once the contract is deployed, you can interact with it. By clicking on "nameOfToken", you can retrieve "KISHAN" string. By clicking on "symbolOfToken", you can retrieve "KR" string.
 
 Click on mint dropdown icon and fill address and value, and click on transact icon. Once clicked, click on "totalSupply" to print the minted tokens.
 
